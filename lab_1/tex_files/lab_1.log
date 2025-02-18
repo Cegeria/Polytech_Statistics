@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.11.1)  19 FEB 2025 01:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.11.1)  19 FEB 2025 01:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -645,7 +645,7 @@ You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-Overfull \hbox (13.33937pt too wide) in paragraph at lines 73--104
+Overfull \hbox (8.35085pt too wide) in paragraph at lines 73--104
 [] 
  []
 
@@ -653,9 +653,9 @@ Overfull \hbox (13.33937pt too wide) in paragraph at lines 73--104
 File: lab_1_Cauchy.png Graphic file (type png)
 <use lab_1_Cauchy.png>
 Package pdftex.def Info: lab_1_Cauchy.png  used on input line 108.
-(pdftex.def)             Requested size: 601.27928pt x 234.87471pt.
+(pdftex.def)             Requested size: 555.03789pt x 216.81168pt.
 
-Overfull \hbox (86.56891pt too wide) in paragraph at lines 108--108
+Overfull \hbox (40.32751pt too wide) in paragraph at lines 108--108
  [] 
  []
 
@@ -664,9 +664,9 @@ Overfull \hbox (86.56891pt too wide) in paragraph at lines 108--108
 File: lab_1_Normal.png Graphic file (type png)
 <use lab_1_Normal.png>
 Package pdftex.def Info: lab_1_Normal.png  used on input line 113.
-(pdftex.def)             Requested size: 601.27928pt x 234.87471pt.
+(pdftex.def)             Requested size: 555.03789pt x 216.81168pt.
 
-Overfull \hbox (86.56891pt too wide) in paragraph at lines 113--113
+Overfull \hbox (40.32751pt too wide) in paragraph at lines 113--113
  [] 
  []
 
@@ -674,9 +674,9 @@ Overfull \hbox (86.56891pt too wide) in paragraph at lines 113--113
 File: lab_1_Poisson.png Graphic file (type png)
 <use lab_1_Poisson.png>
 Package pdftex.def Info: lab_1_Poisson.png  used on input line 118.
-(pdftex.def)             Requested size: 601.27928pt x 234.87471pt.
+(pdftex.def)             Requested size: 555.03789pt x 216.81168pt.
 
-Overfull \hbox (86.56891pt too wide) in paragraph at lines 118--118
+Overfull \hbox (40.32751pt too wide) in paragraph at lines 118--118
  [] 
  []
 
@@ -685,22 +685,22 @@ Overfull \hbox (86.56891pt too wide) in paragraph at lines 118--118
 File: lab_1_Uniform.png Graphic file (type png)
 <use lab_1_Uniform.png>
 Package pdftex.def Info: lab_1_Uniform.png  used on input line 123.
-(pdftex.def)             Requested size: 601.27928pt x 234.87471pt.
+(pdftex.def)             Requested size: 555.03789pt x 216.81168pt.
 
-Overfull \hbox (86.56891pt too wide) in paragraph at lines 123--123
+Overfull \hbox (40.32751pt too wide) in paragraph at lines 123--123
  [] 
  []
 
-./lab_1.tex:134: Undefined control sequence.
-l.134 \url
-          {https://github.com/ivgl/MatStatistic}
+./lab_1.tex:130: Undefined control sequence.
+l.130 \url
+          {https://github.com/Cegeria/Polytech\_Statistics/tree/main/lab\_1}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[4 <./lab_1_Poisson.png> <./lab_1_Uniform.png>] [5] (./lab_1.aux) ) 
+[4 <./lab_1_Poisson.png> <./lab_1_Uniform.png>] (./lab_1.aux) ) 
 Here is how much of TeX's memory you used:
  8903 strings out of 476025
  159078 string characters out of 5790017
@@ -708,12 +708,12 @@ Here is how much of TeX's memory you used:
  29220 multiletter control sequences out of 15000+600000
  520088 words of font info for 50 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 77i,8n,81p,579b,274s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 77i,8n,81p,453b,274s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm2488.pfb>
-Output written on lab_1.pdf (6 pages, 278997 bytes).
+Output written on lab_1.pdf (5 pages, 278688 bytes).
 PDF statistics:
- 82 PDF objects out of 1000 (max. 8388607)
- 46 compressed objects within 1 object stream
+ 79 PDF objects out of 1000 (max. 8388607)
+ 44 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,11 +1,11 @@
 # Fdb version 4
-["pdflatex"] 1739916050 "lab_1.tex" "lab_1.pdf" "lab_1" 1739916052 2
+["pdflatex"] 1739917891 "lab_1.tex" "lab_1.pdf" "lab_1" 1739917892 2
   "/Users/maria/Library/texlive/2023/texmf-var/fonts/tfm/lh/lh-t2a/labx1200.tfm" 1698999616 3308 eee81981029f67083258db36df06e523 ""
   "/Users/maria/Library/texlive/2023/texmf-var/fonts/tfm/lh/lh-t2a/labx1728.tfm" 1698999622 3312 d199be9bd555944e2403193d58a0256a ""
   "/Users/maria/Library/texlive/2023/texmf-var/fonts/tfm/lh/lh-t2a/larm1200.tfm" 1698839306 3240 c2435f2b5cd66d4930bc29b8df87967e ""
   "/Users/maria/Library/texlive/2023/texmf-var/fonts/tfm/lh/lh-t2a/larm1728.tfm" 1698840729 3252 92d08740ce00199d6cf9ff4aaada81d1 ""
   "/Users/maria/Library/texlive/2023/texmf-var/fonts/tfm/lh/lh-t2a/larm2488.tfm" 1698840735 3264 102508a989355317d27912fb22a38399 ""
-  "/dev/null" 1739916016 0 d41d8cd98f00b204e9800998ecf8427e ""
+  "/dev/null" 1739917863 0 d41d8cd98f00b204e9800998ecf8427e ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t2a.enc" 1136849721 3141 82d5616418ed8d5de703b3951bedecb4 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -91,9 +91,9 @@
   "/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1698823120 4623355 b8cad38412faebe1ce5b780a45db67bd ""
   "/usr/local/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1698822963 7883457 1b368b893e258a5b74e41547131da2ec ""
   "/usr/local/texlive/2023/texmf.cnf" 1678822455 577 1b2b1af17af2508fb20dd85783af4050 ""
-  "lab_1.aux" 1739916052 580 4e93a5921854d4c31e00d065937acf69 "pdflatex"
-  "lab_1.tex" 1739916049 5320 aa0a19ae9af4a052aa82c53e32ba87ad ""
-  "lab_1.toc" 1739916052 314 7ac65139ba922457862faae5e1481523 "pdflatex"
+  "lab_1.aux" 1739917892 582 b6b00ee7d312adc43ac5ca405c78e2ca "pdflatex"
+  "lab_1.tex" 1739917886 5214 ce423557a9655fcf792021e0c8893c69 ""
+  "lab_1.toc" 1739917892 316 6bd71145a446b90a1063ea9e66d70831 "pdflatex"
   "lab_1_Cauchy.png" 1739912466 49428 cc7351c486bb6c8b000b7d67c5d592be ""
   "lab_1_Normal.png" 1739912499 45363 0cc4ba9b1c5db52b5ef9a2224728c8db ""
   "lab_1_Poisson.png" 1739912519 40403 0293b0a00dfa61107d084ffb8aee4e56 ""
