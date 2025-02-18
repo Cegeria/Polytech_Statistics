@@ -1,0 +1,5 @@
+\babel@toc {russian}{}\relax 
+\contentsline {section}{\numberline {1}Формулировка задания}{2}{}%
+\contentsline {section}{\numberline {2}Полученные данные}{2}{}%
+\contentsline {section}{\numberline {3}Графики}{3}{}%
+\contentsline {section}{\numberline {4}Вывод}{4}{}%
