@@ -1,5 +1,13 @@
 \babel@toc {russian}{}\relax 
-\contentsline {section}{\numberline {1}Формулировка задания}{2}{}%
-\contentsline {section}{\numberline {2}Полученные данные}{2}{}%
-\contentsline {section}{\numberline {3}Графики}{3}{}%
-\contentsline {section}{\numberline {4}Выводы}{4}{}%
+\contentsline {section}{\numberline {1}\Large Формулировка задания}{2}{section.1}%
+\contentsline {section}{\numberline {2}\Large Ссылка на GitHub}{2}{section.2}%
+\contentsline {section}{\numberline {3}Теоретические сведения}{2}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Распределения}{2}{subsection.3.1}%
+\contentsline {paragraph}{Нормальное распределение \( N(0,1) \):}{2}{section*.2}%
+\contentsline {paragraph}{Распределение Коши \( C(0,1) \):}{2}{section*.3}%
+\contentsline {paragraph}{Распределение Пуассона \( P(\lambda =10) \):}{2}{section*.4}%
+\contentsline {paragraph}{Равномерное распределение \( U(-\sqrt {3},\sqrt {3}) \):}{2}{section*.5}%
+\contentsline {subsection}{\numberline {3.2}Статистики}{3}{subsection.3.2}%
+\contentsline {section}{\numberline {4}\Large Данные}{3}{section.4}%
+\contentsline {section}{\numberline {5}\Large Графики}{3}{section.5}%
+\contentsline {section}{\numberline {6}\Large Вывод}{4}{section.6}%

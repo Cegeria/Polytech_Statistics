@@ -6,35 +6,26 @@ from scipy.stats import cauchy, norm, poisson, uniform
 
 sample_sizes = [10, 50, 1000]
 
-
 distributions = {
     "Cauchy": {
         "func": cauchy.rvs,
         "pdf": cauchy.pdf,
-        "x_range": np.linspace(-10, 10, 1000),
-        "bins": "scott",
-        "range": (-5, 5),
+        "x_range": np.linspace(-10, 10, 1000)
     },
     "Normal": {
         "func": norm.rvs,
         "pdf": norm.pdf,
-        "x_range": np.linspace(-5, 5, 1000),
-        "bins": "scott",
-        "range": (-5, 5),
+        "x_range": np.linspace(-5, 5, 1000)
     },
     "Poisson": {
         "func": lambda size: poisson.rvs(mu=10, size=size),
         "pdf": lambda x: poisson.pmf(x, mu=10),
-        "x_range": np.arange(0, 10),
-        "bins": np.arange(-0.5, 10.5, 1),
-        "range": (0, 10),
+        "x_range": np.arange(0, 10)
     },
     "Uniform": {
         "func": lambda size: uniform.rvs(loc=-np.sqrt(3), scale=2*np.sqrt(3), size=size),
         "pdf": lambda x: uniform.pdf(x, loc=-np.sqrt(3), scale=2*np.sqrt(3)),
-        "x_range": np.linspace(-2, 2, 1000),
-        "bins": 0,
-        "range": (-2, 2),
+        "x_range": np.linspace(-2, 2, 1000)
     }
 }
 
@@ -44,30 +35,7 @@ for dist_name, dist_info in distributions.items():
     
     for i, size in enumerate(sample_sizes):
         samples = dist_info["func"](size=size)
-        
-        if isinstance(dist_info["bins"], str) and dist_info["bins"] == "scott":
-    # Автоматический выбор бинов по правилу Скотта
-            bin_width = 3.5 * np.std(samples) / (len(samples) ** (1/3))
-            bins = int((np.max(samples) - np.min(samples)) / bin_width)
-        else:
-            if dist_name == "Poisson":
-                unique_values = np.unique(samples)
-                if len(unique_values) > 0:
-                    bins = np.arange(-0.5, max(unique_values) + 1.5, 1)            
-            if dist_name == "Uniform":
-                if size == 10:
-                    bins = 8
-                elif size == 50:
-                    bins = 10
-                else:
-                    bins = 20
-            else:
-                bins = dist_info["bins"]
-
-        axes[i].hist(samples, bins=bins, 
-                     range=dist_info.get("range", None), density=True, 
-                     alpha=0.6, color='g', label='Histogram')
-
+        axes[i].hist(samples, bins='auto', density=True, alpha=0.6, color='g', label='Histogram')
         x = dist_info["x_range"]
         pdf = dist_info["pdf"](x)
         axes[i].plot(x, pdf, 'r-', label='PDF')
@@ -131,6 +99,6 @@ for dist_name, sizes in results.items():
     for size, stats in sizes.items():
         print(f"  Sample size: {size}")
         for stat_name, value in stats.items():
-            print(f"    {stat_name}: {value:2.2f}")
+            print(f"    {stat_name}: {value:.4f}")
     print()
 
