@@ -2,6 +2,7 @@ import numpy as np
 from scipy.optimize import minimize
 import statsmodels.api as sm
 from math import ceil
+import matplotlib.pyplot as plt
 
 np.random.seed(123)  
 x = np.linspace(-1.8, 2.0, 20)
@@ -74,3 +75,82 @@ print(f"LAD: a^ = {a_lad:.2f}, a^/a = {a_lad_2:.2f}, b = {b_lad:.2f}, b^/b = {b_
 print("With perturbation:")
 print(f"OLS: a^ = {a_ols_pert:.2f}, a^/a = {a_ols_pert_2:.2f}, b^ = {b_ols_pert:.2f}, b^/b = {b_ols_pert_2:.2f}")
 print(f"LAD: a^ = {a_lad_pert:.2f}, a^/a = {a_lad_pert_2:.2f}, b = {b_lad_pert:.2f}, b^/b = {b_lad_pert_2:.2f}\n")
+
+plt.figure(figsize=(10, 6))
+
+
+plt.scatter(
+    x, y, 
+    color='blue', 
+    marker='o', 
+    label='Исходные точки',
+    alpha=0.7
+)
+
+plt.plot(
+    x, 2 + 2*x, 
+    color='limegreen', 
+    linewidth=3, 
+    label='Эталон: $y=2+2x$'
+)
+
+plt.plot(
+    x, a_ols + b_ols*x, 
+    color='red', 
+    linestyle='--', 
+    label=f'МНК: $y={a_ols:.2f}+{b_ols:.2f}x$'
+)
+
+plt.plot(
+    x, a_lad + b_lad*x, 
+    color='darkviolet', 
+    linestyle='-.', 
+    label=f'МНМ: $y={a_lad:.2f}+{b_lad:.2f}x$'
+)
+
+plt.title('Регрессия без возмущений', fontsize=12)
+plt.xlabel('x', fontsize=10)
+plt.ylabel('y', fontsize=10)
+plt.legend()
+plt.grid(alpha=0.3)
+plt.tight_layout()
+plt.show()
+
+plt.figure(figsize=(10, 6))
+
+plt.scatter(
+    x, y_perturbed, 
+    color='red', 
+    marker='x', 
+    label='Точки с возмущениями',
+    alpha=0.7
+)
+
+plt.plot(
+    x, 2 + 2*x, 
+    color='limegreen', 
+    linewidth=3, 
+    label='Эталон: $y=2+2x$'
+)
+
+plt.plot(
+    x, a_ols_pert + b_ols_pert*x, 
+    color='red', 
+    linestyle='--', 
+    label=f'МНК: $y={a_ols_pert:.2f}+{b_ols_pert:.2f}x$'
+)
+
+plt.plot(
+    x, a_lad_pert + b_lad_pert*x, 
+    color='darkviolet', 
+    linestyle='-.', 
+    label=f'МНМ: $y={a_lad_pert:.2f}+{b_lad_pert:.2f}x$'
+)
+
+plt.title('Регрессия с возмущениями', fontsize=12)
+plt.xlabel('x', fontsize=10)
+plt.ylabel('y', fontsize=10)
+plt.legend()
+plt.grid(alpha=0.3)
+plt.tight_layout()
+plt.show()
