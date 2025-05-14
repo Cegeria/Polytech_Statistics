@@ -9,25 +9,41 @@ def chi2_normality_test(data, alpha=0.05, num_bins=10):
     if sigma_hat == 0:
         return "Стандартное отклонение равно 0, тест невозможен"
     
-    percentiles = np.linspace(0, 1, num_bins + 1)
-    quantiles = norm.ppf(percentiles, loc=mu_hat, scale=sigma_hat)
+    # Генерация равных интервалов по длине
+    data_min = np.min(data)
+    data_max = np.max(data)
+    bin_edges = np.linspace(data_min, data_max, num_bins + 1)
     
-    observed, _ = np.histogram(data, bins=quantiles)
-    expected = np.array([n / num_bins] * num_bins)
+    # Вычисление вероятностей для каждого интервала
+    p_i = np.zeros(num_bins)
+    for i in range(num_bins):
+        lower = bin_edges[i]
+        upper = bin_edges[i+1]
+        # Вероятность через CDF нормального распределения
+        p_i[i] = norm.cdf(upper, mu_hat, sigma_hat) - norm.cdf(lower, mu_hat, sigma_hat)
     
+    # Наблюдаемые частоты
+    observed, _ = np.histogram(data, bins=bin_edges)
+    
+    # Ожидаемые частоты
+    expected = n * p_i
+    
+    # Вычисление статистики хи-квадрат
     chi2_stat = np.sum((observed - expected)**2 / expected)
-    df = num_bins - 3  
+    df = num_bins - 3
+    
     crit_value = chi2.ppf(1 - alpha, df)
     p_value = 1 - chi2.cdf(chi2_stat, df)
     
+    # Формирование таблицы
     table = "Интервал\tНаблюдаемая\tОжидаемая\t(О-Е)^2/Е\n"
     for i in range(num_bins):
-        bin_start = quantiles[i]
-        bin_end = quantiles[i+1]
+        lower = bin_edges[i]
+        upper = bin_edges[i+1]
         obs = observed[i]
         exp = expected[i]
-        contribution = (obs - exp)**2 / exp
-        table += f"[{bin_start:.2f}, {bin_end:.2f})\t{obs}\t\t{exp:.1f}\t\t{contribution:.2f}\n"
+        contribution = (obs - exp)**2 / exp if exp != 0 else np.inf
+        table += f"[{lower:.2f}, {upper:.2f})\t{obs}\t\t{exp:.1f}\t\t{contribution:.2f}\n"
     
     return chi2_stat, crit_value, p_value, table
 
@@ -43,8 +59,9 @@ print("Таблица для нормальной выборки:")
 print(table)
 
 data_unif_100 = np.random.uniform(size=100)
-chi2_stat_unif, crit_val_unif, p_val_unif, table_unif = chi2_normality_test(data_unif_100)
+chi2_stat_unif, crit_val_unif, p_val_unif, table_unif = chi2_normality_test(data_unif_100, num_bins=10)
 print(f"\nДля равномерной выборки 100: Хи-квадрат = {chi2_stat_unif:.2f}, p = {p_val_unif:.4f}")
+print(table_unif)
 
 data_unif_20 = np.random.uniform(size=20)
 chi2_stat_20, crit_val_20, p_val_20, table_20 = chi2_normality_test(data_unif_20, num_bins=4)

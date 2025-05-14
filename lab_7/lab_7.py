@@ -48,12 +48,12 @@ a_Im = a_values[np.argmax(J_Im)]
 a_Out = a_values[np.argmax(J_Out)]
 
 plt.figure(figsize=(10, 6))
-plt.plot(a_values, J_Im, label='J_Im')
+plt.plot(a_values, J_Im, label='J_Inn')
 plt.plot(a_values, J_Out, label='J_Out')
 plt.xlabel('a')
 plt.ylabel('J')
 plt.legend()
-plt.title('Графики J_Im(a) и J_Out(a)')
+plt.title('Графики J_Inn(a) и J_Out(a)')
 plt.grid(True)
 plt.show()
 

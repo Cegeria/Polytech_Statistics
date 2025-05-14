@@ -39,8 +39,8 @@ np.random.seed(42)
 
 n20_normal = np.random.normal(loc=0, scale=1, size=20)
 n100_normal = np.random.normal(loc=0, scale=1, size=100)
-n20_arbitrary = np.random.lognormal(mean=0, sigma=0.5, size=20)  
-n100_arbitrary = np.random.lognormal(mean=0, sigma=0.5, size=100)
+n20_arbitrary = np.random.normal(loc=0, scale=0.5, size=20)  
+n100_arbitrary = np.random.normal(loc=0, scale=0.5, size=100)
 
 ci_n20_normal = confidence_intervals_normal(n20_normal)
 ci_n100_normal = confidence_intervals_normal(n100_normal)
