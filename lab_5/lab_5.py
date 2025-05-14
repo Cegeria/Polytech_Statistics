@@ -9,33 +9,26 @@ def chi2_normality_test(data, alpha=0.05, num_bins=10):
     if sigma_hat == 0:
         return "Стандартное отклонение равно 0, тест невозможен"
     
-    # Генерация равных интервалов по длине
     data_min = np.min(data)
     data_max = np.max(data)
     bin_edges = np.linspace(data_min, data_max, num_bins + 1)
     
-    # Вычисление вероятностей для каждого интервала
     p_i = np.zeros(num_bins)
     for i in range(num_bins):
         lower = bin_edges[i]
         upper = bin_edges[i+1]
-        # Вероятность через CDF нормального распределения
         p_i[i] = norm.cdf(upper, mu_hat, sigma_hat) - norm.cdf(lower, mu_hat, sigma_hat)
     
-    # Наблюдаемые частоты
     observed, _ = np.histogram(data, bins=bin_edges)
     
-    # Ожидаемые частоты
     expected = n * p_i
     
-    # Вычисление статистики хи-квадрат
     chi2_stat = np.sum((observed - expected)**2 / expected)
     df = num_bins - 3
     
     crit_value = chi2.ppf(1 - alpha, df)
     p_value = 1 - chi2.cdf(chi2_stat, df)
     
-    # Формирование таблицы
     table = "Интервал\tНаблюдаемая\tОжидаемая\t(О-Е)^2/Е\n"
     for i in range(num_bins):
         lower = bin_edges[i]
